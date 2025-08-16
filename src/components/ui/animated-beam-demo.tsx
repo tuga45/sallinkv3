@@ -3,13 +3,13 @@
 import React, { forwardRef, useRef } from "react";
 import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "@/components/ui/animated-beam";
-import { PiOpenAiLogoThin } from "react-icons/pi";
 import {
   SiAirtable,
   SiSlack,
   SiNotion,
   SiGooglecalendar,
   SiGooglesheets,
+  SiOpenai,
 } from "react-icons/si";
 import Image from "next/image";
 
@@ -50,7 +50,7 @@ export function AnimatedBeamDemo() {
       <div className="flex size-full flex-col max-w-2xl max-h-[300px] items-stretch justify-between gap-10">
         <div className="flex flex-row items-center justify-between">
           <Circle ref={div1Ref} className="size-16">
-            <PiOpenAiLogoThin size={28} color="#000000" />
+            <SiOpenai size={28} color="#000000" />
           </Circle>
           <Circle ref={div5Ref} className="size-16">
             <SiNotion size={24} color="#000000" />
