@@ -116,6 +116,10 @@ const ShaderBackground = () => {
     source: string,
   ): WebGLShader | null => {
     const shader = gl.createShader(type);
+    if (!shader) {
+      console.error('Failed to create shader');
+      return null;
+    }
     gl.shaderSource(shader, source);
     gl.compileShader(shader);
 
