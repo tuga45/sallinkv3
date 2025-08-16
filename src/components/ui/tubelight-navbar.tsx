@@ -113,7 +113,13 @@ export function NavBar({ items, className }: NavBarProps) {
       className
     )}>
       <motion.div 
-        className="relative bg-white/95 border border-purple-200 backdrop-blur-lg shadow-lg overflow-hidden ring-1 ring-purple-100"
+        className="relative bg-white/95 border border-purple-200 backdrop-blur-lg shadow-lg overflow-hidden ring-1 ring-purple-100 h-12 rounded-[24px]"
+        initial={{
+          borderRadius: "24px",
+          width: "auto",
+          height: "48px",
+          minWidth: "auto",
+        }}
         animate={{
           borderRadius: isCircleMode ? "50%" : "24px",
           width: isCircleMode ? "48px" : "auto",
