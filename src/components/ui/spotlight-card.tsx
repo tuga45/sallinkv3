@@ -65,7 +65,10 @@ const GlowCard: React.FC<GlowCardProps> = ({
   };
 
   const getInlineStyles = () => {
-    const baseStyles = {
+    type CustomVars = '--base' | '--spread' | '--radius' | '--border' | '--backdrop' | '--backup-border' | '--size' | '--outer' | '--border-size' | '--spotlight-size' | '--hue';
+    type CustomStyle = React.CSSProperties & Record<CustomVars, string | number>;
+
+    const baseStyles: CustomStyle = {
       '--base': base,
       '--spread': spread,
       '--radius': '14',
@@ -88,8 +91,8 @@ const GlowCard: React.FC<GlowCardProps> = ({
       backgroundPosition: '50% 50%',
       backgroundAttachment: 'fixed',
       border: 'var(--border-size) solid var(--backup-border)',
-      position: 'relative' as const,
-      touchAction: 'none' as const,
+      position: 'relative',
+      touchAction: 'none',
     };
 
     // Add width and height if provided
